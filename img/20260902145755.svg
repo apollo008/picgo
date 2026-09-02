@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500">
+<defs>
+<style>
+  .title { font: bold 22px sans-serif; fill: #1E293B; }
+  .subtitle { font: bold 14px sans-serif; fill: #334155; }
+  .label { font: 12px sans-serif; fill: #1E293B; }
+  .sublabel { font: 10px sans-serif; fill: #64748B; }
+  .box { rx: 8; ry: 8; stroke-width: 2; }
+</style>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#64748B"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="600" y="40" text-anchor="middle" class="title">ESearch 实时索引 · 多级段生命周期</text>
+<rect class="box" x="80" y="100" width="160" height="80" fill="#FFEDD5" stroke="#EA580C"/>
+<text x="160.0" y="134.0" text-anchor="middle" font-weight="bold" class="label">3秒段</text>
+<text x="160.0" y="152.0" text-anchor="middle" class="sublabel">实时写入</text>
+<line x1="240" y1="140" x2="265" y2="140" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect class="box" x="265" y="100" width="160" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="345.0" y="134.0" text-anchor="middle" font-weight="bold" class="label">15分钟段</text>
+<text x="345.0" y="152.0" text-anchor="middle" class="sublabel">快速合并</text>
+<line x1="425" y1="140" x2="450" y2="140" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect class="box" x="450" y="100" width="160" height="80" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="530.0" y="134.0" text-anchor="middle" font-weight="bold" class="label">6小时段</text>
+<text x="530.0" y="152.0" text-anchor="middle" class="sublabel">中期合并</text>
+<line x1="610" y1="140" x2="635" y2="140" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect class="box" x="635" y="100" width="160" height="80" fill="#EDE9FE" stroke="#7C3AED"/>
+<text x="715.0" y="134.0" text-anchor="middle" font-weight="bold" class="label">1天段</text>
+<text x="715.0" y="152.0" text-anchor="middle" class="sublabel">日级合并</text>
+<line x1="795" y1="140" x2="820" y2="140" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect class="box" x="820" y="100" width="160" height="80" fill="#D1FAE5" stroke="#059669"/>
+<text x="900.0" y="134.0" text-anchor="middle" font-weight="bold" class="label">1月段</text>
+<text x="900.0" y="152.0" text-anchor="middle" class="sublabel">月级合并</text>
+<line x1="980" y1="140" x2="1005" y2="140" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect class="box" x="1005" y="100" width="160" height="80" fill="#F1F5F9" stroke="#64748B"/>
+<text x="1085.0" y="134.0" text-anchor="middle" font-weight="bold" class="label">永久段</text>
+<text x="1085.0" y="152.0" text-anchor="middle" class="sublabel">离线推送</text>
+<rect class="box" x="80" y="260" width="220" height="70" fill="#FFEDD5" stroke="#EA580C"/>
+<text x="190.0" y="289.0" text-anchor="middle" font-weight="bold" class="label">WriterSegment</text>
+<text x="190.0" y="307.0" text-anchor="middle" class="sublabel">内存写段 · Updater写入</text>
+<rect class="box" x="380" y="260" width="260" height="70" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="510.0" y="289.0" text-anchor="middle" font-weight="bold" class="label">WriteToReaderSegConverter</text>
+<text x="510.0" y="307.0" text-anchor="middle" class="sublabel">写段→读段转换 · 可见性统计</text>
+<rect class="box" x="720" y="260" width="260" height="70" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="850.0" y="289.0" text-anchor="middle" font-weight="bold" class="label">Segment Merger</text>
+<text x="850.0" y="307.0" text-anchor="middle" class="sublabel">后台段合并 · TieredMergePolicy</text>
+<line x1="190" y1="260" x2="140" y2="180" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="300" y1="295" x2="140" y2="180" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="510" y1="295" x2="230" y2="180" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="850" y1="295" x2="600" y2="180" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect class="box" x="300" y="400" width="600" height="60" fill="#D1FAE5" stroke="#059669"/>
+<text x="600.0" y="434.0" text-anchor="middle" font-weight="bold" class="label">毫秒级可见性: Realtime_Index_Config.Enabled → 文档 birth_time 到可检索延迟监控</text>
+</svg>
