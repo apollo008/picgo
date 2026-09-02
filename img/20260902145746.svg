@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" width="1200" height="580">
+<defs>
+<style>
+  .title { font: bold 22px sans-serif; fill: #1E293B; }
+  .subtitle { font: bold 14px sans-serif; fill: #334155; }
+  .label { font: 12px sans-serif; fill: #1E293B; }
+  .sublabel { font: 10px sans-serif; fill: #64748B; }
+  .box { rx: 8; ry: 8; stroke-width: 2; }
+</style>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#64748B"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="600" y="38" text-anchor="middle" class="title">ESearch 索引体系</text>
+<line x1="60" y1="52" x2="1140" y2="52" stroke="#2B6CB0" stroke-width="3"/>
+<rect class="box" x="60" y="80" width="260" height="130" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="190.0" y="139.0" text-anchor="middle" font-weight="bold" class="label">倒排索引</text>
+<text x="190.0" y="157.0" text-anchor="middle" class="sublabel">FST 词典 + 分块 Postings</text>
+<rect class="box" x="60" y="225" width="260" height="50" fill="#D1FAE5" stroke="#059669"/>
+<text x="190.0" y="254.0" text-anchor="middle" font-weight="normal" class="label">BM25 文本相关性</text>
+<rect class="box" x="345" y="80" width="260" height="130" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="475.0" y="139.0" text-anchor="middle" font-weight="bold" class="label">BKD 索引</text>
+<text x="475.0" y="157.0" text-anchor="middle" class="sublabel">数值范围查询</text>
+<rect class="box" x="345" y="225" width="260" height="50" fill="#D1FAE5" stroke="#059669"/>
+<text x="475.0" y="254.0" text-anchor="middle" font-weight="normal" class="label">O(log N + R) 复杂度</text>
+<rect class="box" x="630" y="80" width="260" height="130" fill="#EDE9FE" stroke="#7C3AED"/>
+<text x="760.0" y="139.0" text-anchor="middle" font-weight="bold" class="label">正排索引</text>
+<text x="760.0" y="157.0" text-anchor="middle" class="sublabel">DocValues 列存 + StoredFields 行存</text>
+<rect class="box" x="630" y="225" width="260" height="50" fill="#D1FAE5" stroke="#059669"/>
+<text x="760.0" y="254.0" text-anchor="middle" font-weight="normal" class="label">排序 · 聚合 · 文档还原</text>
+<rect class="box" x="915" y="80" width="260" height="130" fill="#FFEDD5" stroke="#EA580C"/>
+<text x="1045.0" y="139.0" text-anchor="middle" font-weight="bold" class="label">向量索引</text>
+<text x="1045.0" y="157.0" text-anchor="middle" class="sublabel">HNSW / IVF 聚类</text>
+<rect class="box" x="915" y="225" width="260" height="50" fill="#D1FAE5" stroke="#059669"/>
+<text x="1045.0" y="254.0" text-anchor="middle" font-weight="normal" class="label">KNN 语义检索 + 混合融合</text>
+<rect class="box" x="60" y="310" width="1080" height="100" fill="#F8FAFC" stroke="#CBD5E1"/>
+<text x="600" y="345" text-anchor="middle" class="subtitle">索引体系协同关系</text>
+<text x="200" y="380" text-anchor="middle" class="sublabel">倒排：关键词召回与文本相关性打分</text>
+<text x="500" y="380" text-anchor="middle" class="sublabel">BKD：数值范围过滤，替代倒排链 OR 合并</text>
+<text x="800" y="380" text-anchor="middle" class="sublabel">正排：排序字段、聚合统计、结果字段返回</text>
+<text x="1050" y="380" text-anchor="middle" class="sublabel">向量：语义检索，与标量组合查询</text>
+<line x1="330" y1="145" x2="360" y2="145" stroke="#EA580C" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="615" y1="145" x2="645" y2="145" stroke="#EA580C" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="900" y1="145" x2="930" y2="145" stroke="#EA580C" stroke-width="2" marker-end="url(#arrow)"/>
+<rect class="box" x="60" y="440" width="1080" height="110" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="600" y="475" text-anchor="middle" class="subtitle" fill="#2B6CB0">核心性能指标（生产环境实测）</text>
+<text x="200" y="510" text-anchor="middle" class="label">倒排：索引体积 -23.64%，查询耗时 -71%</text>
+<text x="500" y="510" text-anchor="middle" class="label">BKD：Range 查询耗时 -57.9%</text>
+<text x="800" y="510" text-anchor="middle" class="label">正排：DocValues 体积 -57.96%</text>
+<text x="1050" y="510" text-anchor="middle" class="label">向量：15+ 云搜应用接入</text>
+</svg>
