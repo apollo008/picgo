@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700">
+<defs>
+<style>
+  .title { font: bold 22px sans-serif; fill: #1E293B; }
+  .subtitle { font: bold 14px sans-serif; fill: #334155; }
+  .label { font: 12px sans-serif; fill: #1E293B; }
+  .sublabel { font: 10px sans-serif; fill: #64748B; }
+  .box { rx: 8; ry: 8; stroke-width: 2; }
+</style>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#64748B"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="550" y="40" text-anchor="middle" class="title">ESearch 1.0 vs 2.0 查询引擎对比</text>
+<text x="275" y="80" text-anchor="middle" class="subtitle" fill="#2B6CB0">ESearch 1.0</text>
+<text x="825" y="80" text-anchor="middle" class="subtitle" fill="#0D9488">ESearch 2.0</text>
+<rect class="box" x="50" y="95" width="450" height="55" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="275.0" y="126.5" text-anchor="middle" font-weight="bold" class="label">文本 DSL 协议 (ProtocolType=12)</text>
+<rect class="box" x="600" y="95" width="450" height="55" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="825.0" y="126.5" text-anchor="middle" font-weight="bold" class="label">Protobuf 协议 (ProtocolType=16)</text>
+<rect class="box" x="50" y="170" width="210" height="140" fill="#FFFFFF" stroke="#2B6CB0"/>
+<text x="155.0" y="234.0" text-anchor="middle" font-weight="bold" class="label">Query AST</text>
+<text x="155.0" y="252.0" text-anchor="middle" class="sublabel">NormalQuery/Range/And/Or
+OptionalQuery/Fuzzy
+GeometryQuery/Nested</text>
+<rect class="box" x="280" y="170" width="220" height="140" fill="#FFFFFF" stroke="#2B6CB0"/>
+<text x="390.0" y="234.0" text-anchor="middle" font-weight="bold" class="label">请求子句</text>
+<text x="390.0" y="252.0" text-anchor="middle" class="sublabel">check/geocheck/sort
+facet/dedupe/extract
+group/recall/scroll</text>
+<rect class="box" x="600" y="170" width="210" height="140" fill="#FFFFFF" stroke="#0D9488"/>
+<text x="705.0" y="234.0" text-anchor="middle" font-weight="bold" class="label">Lucene Query</text>
+<text x="705.0" y="252.0" text-anchor="middle" class="sublabel">bool/term/range/fuzzy
+knn/function_score
+geo_distance/nested</text>
+<rect class="box" x="830" y="170" width="220" height="140" fill="#FFFFFF" stroke="#0D9488"/>
+<text x="940.0" y="234.0" text-anchor="middle" font-weight="bold" class="label">混合检索</text>
+<text x="940.0" y="252.0" text-anchor="middle" class="sublabel">Retriever RRF/MinMax/L2
+QueryCache/RequestCache
+Rescore/Count</text>
+<rect class="box" x="50" y="340" width="450" height="70" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="275.0" y="369.0" text-anchor="middle" font-weight="bold" class="label">QueryExecutor + ScorerFactory 插件</text>
+<text x="275.0" y="387.0" text-anchor="middle" class="sublabel">字段boost + 自定义打分表达式</text>
+<rect class="box" x="600" y="340" width="450" height="70" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="825.0" y="369.0" text-anchor="middle" font-weight="bold" class="label">Query/Weight/Scorer/Collector</text>
+<text x="825.0" y="387.0" text-anchor="middle" class="sublabel">BM25Similarity + 20+ Query类型</text>
+<rect class="box" x="420" y="250" width="260" height="50" fill="#FFEDD5" stroke="#EA580C"/>
+<text x="550.0" y="279.0" text-anchor="middle" font-weight="bold" class="label">Merger CompatV1ToV2 灰度兼容</text>
+<rect class="box" x="50" y="440" width="1000" height="220" fill="#F8FAFC" stroke="#CBD5E1"/>
+<text x="150" y="460" text-anchor="middle" font-weight="bold" class="label">维度</text>
+<text x="500" y="460" text-anchor="middle" font-weight="bold" class="label">ESearch 1.0</text>
+<text x="850" y="460" text-anchor="middle" font-weight="bold" class="label">ESearch 2.0</text>
+<text x="150" y="490" text-anchor="middle" class="sublabel">查询表达</text>
+<text x="500" y="490" text-anchor="middle" class="sublabel">文本DSL+子句</text>
+<text x="850" y="490" text-anchor="middle" class="sublabel">JSON/PB结构化</text>
+<text x="150" y="525" text-anchor="middle" class="sublabel">默认打分</text>
+<text x="500" y="525" text-anchor="middle" class="sublabel">字段boost+插件</text>
+<text x="850" y="525" text-anchor="middle" class="sublabel">BM25 (k1=1.2,b=0.75)</text>
+<text x="150" y="560" text-anchor="middle" class="sublabel">向量检索</text>
+<text x="500" y="560" text-anchor="middle" class="sublabel">不支持</text>
+<text x="850" y="560" text-anchor="middle" class="sublabel">knn + neural_sparse</text>
+<text x="150" y="595" text-anchor="middle" class="sublabel">混合检索</text>
+<text x="500" y="595" text-anchor="middle" class="sublabel">不支持</text>
+<text x="850" y="595" text-anchor="middle" class="sublabel">Retriever多路融合</text>
+<text x="150" y="630" text-anchor="middle" class="sublabel">缓存体系</text>
+<text x="500" y="630" text-anchor="middle" class="sublabel">段级LRU缓存</text>
+<text x="850" y="630" text-anchor="middle" class="sublabel">+QueryCache+RequestCache</text>
+</svg>
