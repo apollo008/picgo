@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<defs>
+<style>
+  .title { font: bold 22px sans-serif; fill: #1E293B; }
+  .subtitle { font: bold 14px sans-serif; fill: #334155; }
+  .label { font: 12px sans-serif; fill: #1E293B; }
+  .sublabel { font: 10px sans-serif; fill: #64748B; }
+  .box { rx: 8; ry: 8; stroke-width: 2; }
+</style>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#64748B"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="600" y="40" text-anchor="middle" class="title">ESearch 1.0 查询类型全景</text>
+<rect class="box" x="60" y="80" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="160.0" y="119.0" text-anchor="middle" font-weight="bold" class="label">NormalQuery</text>
+<text x="160.0" y="137.0" text-anchor="middle" class="sublabel">词项查询 field:value^boost</text>
+<rect class="box" x="280" y="80" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="380.0" y="119.0" text-anchor="middle" font-weight="bold" class="label">RangeQuery</text>
+<text x="380.0" y="137.0" text-anchor="middle" class="sublabel">范围 field:[from TO to]</text>
+<rect class="box" x="500" y="80" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="600.0" y="119.0" text-anchor="middle" font-weight="bold" class="label">And/Or/Not</text>
+<text x="600.0" y="137.0" text-anchor="middle" class="sublabel">布尔组合</text>
+<rect class="box" x="720" y="80" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="820.0" y="119.0" text-anchor="middle" font-weight="bold" class="label">OptionalQuery</text>
+<text x="820.0" y="137.0" text-anchor="middle" class="sublabel">?词 |N 最少匹配</text>
+<rect class="box" x="940" y="80" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="1040.0" y="119.0" text-anchor="middle" font-weight="bold" class="label">FuzzyQuery</text>
+<text x="1040.0" y="137.0" text-anchor="middle" class="sublabel">模糊匹配+JSON配置</text>
+<rect class="box" x="60" y="190" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="160.0" y="229.0" text-anchor="middle" font-weight="bold" class="label">MatchPhrase</text>
+<text x="160.0" y="247.0" text-anchor="middle" class="sublabel">短语匹配</text>
+<rect class="box" x="280" y="190" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="380.0" y="229.0" text-anchor="middle" font-weight="bold" class="label">PrefixQuery</text>
+<text x="380.0" y="247.0" text-anchor="middle" class="sublabel">前缀查询</text>
+<rect class="box" x="500" y="190" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="600.0" y="229.0" text-anchor="middle" font-weight="bold" class="label">GeometryQuery</text>
+<text x="600.0" y="247.0" text-anchor="middle" class="sublabel">空间谓词查询</text>
+<rect class="box" x="720" y="190" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="820.0" y="229.0" text-anchor="middle" font-weight="bold" class="label">NestedQuery</text>
+<text x="820.0" y="247.0" text-anchor="middle" class="sublabel">嵌套文档查询</text>
+<rect class="box" x="940" y="190" width="200" height="90" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="1040.0" y="229.0" text-anchor="middle" font-weight="bold" class="label">GiantQuery</text>
+<text x="1040.0" y="247.0" text-anchor="middle" class="sublabel">大字段子查询</text>
+<text x="600" y="340" text-anchor="middle" class="subtitle">请求子句 (构成完整检索请求)</text>
+<rect class="box" x="60" y="360" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="160.0" y="399.0" text-anchor="middle" font-weight="bold" class="label">check</text>
+<text x="160.0" y="417.0" text-anchor="middle" class="sublabel">正排过滤(参与缓存)</text>
+<rect class="box" x="280" y="360" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="380.0" y="399.0" text-anchor="middle" font-weight="bold" class="label">geocheck</text>
+<text x="380.0" y="417.0" text-anchor="middle" class="sublabel">OGC空间过滤</text>
+<rect class="box" x="500" y="360" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="600.0" y="399.0" text-anchor="middle" font-weight="bold" class="label">sort</text>
+<text x="600.0" y="417.0" text-anchor="middle" class="sublabel">字段/插件排序</text>
+<rect class="box" x="720" y="360" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="820.0" y="399.0" text-anchor="middle" font-weight="bold" class="label">facet</text>
+<text x="820.0" y="417.0" text-anchor="middle" class="sublabel">分组统计</text>
+<rect class="box" x="940" y="360" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="1040.0" y="399.0" text-anchor="middle" font-weight="bold" class="label">dedupe</text>
+<text x="1040.0" y="417.0" text-anchor="middle" class="sublabel">结果去重</text>
+<rect class="box" x="60" y="470" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="160.0" y="509.0" text-anchor="middle" font-weight="bold" class="label">extract</text>
+<text x="160.0" y="527.0" text-anchor="middle" class="sublabel">一一抽取</text>
+<rect class="box" x="280" y="470" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="380.0" y="509.0" text-anchor="middle" font-weight="bold" class="label">group</text>
+<text x="380.0" y="527.0" text-anchor="middle" class="sublabel">分组排序</text>
+<rect class="box" x="500" y="470" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="600.0" y="509.0" text-anchor="middle" font-weight="bold" class="label">recall</text>
+<text x="600.0" y="527.0" text-anchor="middle" class="sublabel">局部召回</text>
+<rect class="box" x="720" y="470" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="820.0" y="509.0" text-anchor="middle" font-weight="bold" class="label">secondrecall</text>
+<text x="820.0" y="527.0" text-anchor="middle" class="sublabel">二次召回改写</text>
+<rect class="box" x="940" y="470" width="200" height="90" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="1040.0" y="509.0" text-anchor="middle" font-weight="bold" class="label">listrank</text>
+<text x="1040.0" y="527.0" text-anchor="middle" class="sublabel">Merger层排序</text>
+</svg>
