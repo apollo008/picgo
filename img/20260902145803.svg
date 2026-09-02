@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" width="1100" height="500">
+<defs>
+<style>
+  .title { font: bold 22px sans-serif; fill: #1E293B; }
+  .subtitle { font: bold 14px sans-serif; fill: #334155; }
+  .label { font: 12px sans-serif; fill: #1E293B; }
+  .sublabel { font: 10px sans-serif; fill: #64748B; }
+  .box { rx: 8; ry: 8; stroke-width: 2; }
+</style>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#64748B"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="550" y="40" text-anchor="middle" class="title">毫秒级可见性功能 (Realtime_Index_Config)</text>
+<rect class="box" x="80" y="120" width="180" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="170.0" y="154.0" text-anchor="middle" font-weight="bold" class="label">文档写入</text>
+<text x="170.0" y="172.0" text-anchor="middle" class="sublabel">Updater接收
+记录birth_time</text>
+<rect class="box" x="300" y="120" width="180" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="390.0" y="154.0" text-anchor="middle" font-weight="bold" class="label">内存写段</text>
+<text x="390.0" y="172.0" text-anchor="middle" class="sublabel">WriterSegment
+实时索引</text>
+<rect class="box" x="520" y="120" width="180" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="610.0" y="154.0" text-anchor="middle" font-weight="bold" class="label">写转读</text>
+<text x="610.0" y="172.0" text-anchor="middle" class="sublabel">W2R Converter
+异步转换</text>
+<rect class="box" x="740" y="120" width="180" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="830.0" y="154.0" text-anchor="middle" font-weight="bold" class="label">可检索</text>
+<text x="830.0" y="172.0" text-anchor="middle" class="sublabel">ReaderSegment
+立即可查询</text>
+<rect class="box" x="960" y="120" width="180" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="1050.0" y="154.0" text-anchor="middle" font-weight="bold" class="label">监控</text>
+<text x="1050.0" y="172.0" text-anchor="middle" class="sublabel">Prometheus
+visibility指标</text>
+<line x1="260" y1="160" x2="300" y2="160" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="480" y1="160" x2="520" y2="160" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="700" y1="160" x2="740" y2="160" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="920" y1="160" x2="960" y2="160" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+<rect class="box" x="80" y="280" width="940" height="150" fill="#EBF4FF" stroke="#2B6CB0"/>
+<text x="550" y="315" text-anchor="middle" class="subtitle" fill="#2B6CB0">核心配置 (base.conf)</text>
+<text x="200" y="355" text-anchor="middle" class="label">Enabled: true</text>
+<text x="550" y="355" text-anchor="middle" class="label">MaxDoc_InRealtimeSeg: 65535</text>
+<text x="900" y="355" text-anchor="middle" class="label">ReadWriteSegmentLifetime: 5~120s</text>
+<text x="550" y="395" text-anchor="middle" class="sublabel">上线场景: 商业部门黄页家庭服务SaaS客户检索服务</text>
+<text x="550" y="415" text-anchor="middle" class="sublabel">指标: esearch_add_visibility_total / esearch_add_visibility_latency_in_millis (tp90/tp99)</text>
+</svg>
