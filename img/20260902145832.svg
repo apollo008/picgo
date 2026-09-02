@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<defs>
+<style>
+  .title { font: bold 22px sans-serif; fill: #1E293B; }
+  .subtitle { font: bold 14px sans-serif; fill: #334155; }
+  .label { font: 12px sans-serif; fill: #1E293B; }
+  .sublabel { font: 10px sans-serif; fill: #64748B; }
+  .box { rx: 8; ry: 8; stroke-width: 2; }
+</style>
+<marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+  <polygon points="0 0, 10 3.5, 0 7" fill="#64748B"/>
+</marker>
+</defs>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="600" y="40" text-anchor="middle" class="title">ESearch 2.0 查询类型全景</text>
+<rect class="box" x="40" y="70" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="127.5" y="104.0" text-anchor="middle" font-weight="bold" class="label">bool</text>
+<text x="127.5" y="122.0" text-anchor="middle" class="sublabel">must/filter/should/must_not</text>
+<rect class="box" x="230" y="70" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="317.5" y="104.0" text-anchor="middle" font-weight="bold" class="label">term</text>
+<text x="317.5" y="122.0" text-anchor="middle" class="sublabel">精确词项匹配</text>
+<rect class="box" x="420" y="70" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="507.5" y="104.0" text-anchor="middle" font-weight="bold" class="label">terms</text>
+<text x="507.5" y="122.0" text-anchor="middle" class="sublabel">多词项OR</text>
+<rect class="box" x="610" y="70" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="697.5" y="104.0" text-anchor="middle" font-weight="bold" class="label">range</text>
+<text x="697.5" y="122.0" text-anchor="middle" class="sublabel">数值/日期范围</text>
+<rect class="box" x="800" y="70" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="887.5" y="104.0" text-anchor="middle" font-weight="bold" class="label">match_phrase</text>
+<text x="887.5" y="122.0" text-anchor="middle" class="sublabel">短语+slop</text>
+<rect class="box" x="990" y="70" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="1077.5" y="104.0" text-anchor="middle" font-weight="bold" class="label">match_phrase_prefix</text>
+<text x="1077.5" y="122.0" text-anchor="middle" class="sublabel">短语前缀</text>
+<rect class="box" x="40" y="170" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="127.5" y="204.0" text-anchor="middle" font-weight="bold" class="label">fuzzy</text>
+<text x="127.5" y="222.0" text-anchor="middle" class="sublabel">编辑距离模糊</text>
+<rect class="box" x="230" y="170" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="317.5" y="204.0" text-anchor="middle" font-weight="bold" class="label">prefix</text>
+<text x="317.5" y="222.0" text-anchor="middle" class="sublabel">前缀查询</text>
+<rect class="box" x="420" y="170" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="507.5" y="204.0" text-anchor="middle" font-weight="bold" class="label">dis_max</text>
+<text x="507.5" y="222.0" text-anchor="middle" class="sublabel">析取最大分</text>
+<rect class="box" x="610" y="170" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="697.5" y="204.0" text-anchor="middle" font-weight="bold" class="label">exists</text>
+<text x="697.5" y="222.0" text-anchor="middle" class="sublabel">字段存在性</text>
+<rect class="box" x="800" y="170" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="887.5" y="204.0" text-anchor="middle" font-weight="bold" class="label">match_all/none</text>
+<text x="887.5" y="222.0" text-anchor="middle" class="sublabel">全匹配/空匹配</text>
+<rect class="box" x="990" y="170" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="1077.5" y="204.0" text-anchor="middle" font-weight="bold" class="label">geo_distance</text>
+<text x="1077.5" y="222.0" text-anchor="middle" class="sublabel">球面距离</text>
+<rect class="box" x="40" y="270" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="127.5" y="304.0" text-anchor="middle" font-weight="bold" class="label">geo_bounding_box</text>
+<text x="127.5" y="322.0" text-anchor="middle" class="sublabel">矩形包围盒</text>
+<rect class="box" x="230" y="270" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="317.5" y="304.0" text-anchor="middle" font-weight="bold" class="label">knn</text>
+<text x="317.5" y="322.0" text-anchor="middle" class="sublabel">向量近邻</text>
+<rect class="box" x="420" y="270" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="507.5" y="304.0" text-anchor="middle" font-weight="bold" class="label">function_score</text>
+<text x="507.5" y="322.0" text-anchor="middle" class="sublabel">函数打分</text>
+<rect class="box" x="610" y="270" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="697.5" y="304.0" text-anchor="middle" font-weight="bold" class="label">nested</text>
+<text x="697.5" y="322.0" text-anchor="middle" class="sublabel">嵌套文档</text>
+<rect class="box" x="800" y="270" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="887.5" y="304.0" text-anchor="middle" font-weight="bold" class="label">neural_sparse</text>
+<text x="887.5" y="322.0" text-anchor="middle" class="sublabel">神经稀疏向量</text>
+<rect class="box" x="990" y="270" width="175" height="80" fill="#CCFBF1" stroke="#0D9488"/>
+<text x="1077.5" y="304.0" text-anchor="middle" font-weight="bold" class="label">boost_query</text>
+<text x="1077.5" y="322.0" text-anchor="middle" class="sublabel">子查询boost</text>
+<text x="600" y="490" text-anchor="middle" class="subtitle">混合检索 Retriever (与 query 互斥)</text>
+<rect class="box" x="200" y="510" width="800" height="60" fill="#FFEDD5" stroke="#EA580C"/>
+<text x="600.0" y="534.0" text-anchor="middle" font-weight="bold" class="label">融合策略: RRF / MinMax / L2  +  叶子召回器: standard / knn</text>
+<text x="600.0" y="552.0" text-anchor="middle" class="sublabel">window_size控制融合窗口</text>
+<text x="600" y="610" text-anchor="middle" class="subtitle">定制能力 (SearchProto)</text>
+<rect class="box" x="60" y="630" width="170" height="70" fill="#EDE9FE" stroke="#7C3AED"/>
+<text x="145.0" y="659.0" text-anchor="middle" font-weight="bold" class="label">check</text>
+<text x="145.0" y="677.0" text-anchor="middle" class="sublabel">正排过滤(段缓存)</text>
+<rect class="box" x="245" y="630" width="170" height="70" fill="#EDE9FE" stroke="#7C3AED"/>
+<text x="330.0" y="659.0" text-anchor="middle" font-weight="bold" class="label">no_cache_check</text>
+<text x="330.0" y="677.0" text-anchor="middle" class="sublabel">无缓存二次过滤</text>
+<rect class="box" x="430" y="630" width="170" height="70" fill="#EDE9FE" stroke="#7C3AED"/>
+<text x="515.0" y="659.0" text-anchor="middle" font-weight="bold" class="label">dedupe</text>
+<text x="515.0" y="677.0" text-anchor="middle" class="sublabel">多字段去重</text>
+<rect class="box" x="615" y="630" width="170" height="70" fill="#EDE9FE" stroke="#7C3AED"/>
+<text x="700.0" y="659.0" text-anchor="middle" font-weight="bold" class="label">extract</text>
+<text x="700.0" y="677.0" text-anchor="middle" class="sublabel">一一抽取</text>
+<rect class="box" x="800" y="630" width="170" height="70" fill="#EDE9FE" stroke="#7C3AED"/>
+<text x="885.0" y="659.0" text-anchor="middle" font-weight="bold" class="label">rescore</text>
+<text x="885.0" y="677.0" text-anchor="middle" class="sublabel">窗口二次打分</text>
+<rect class="box" x="985" y="630" width="170" height="70" fill="#EDE9FE" stroke="#7C3AED"/>
+<text x="1070.0" y="659.0" text-anchor="middle" font-weight="bold" class="label">sort</text>
+<text x="1070.0" y="677.0" text-anchor="middle" class="sublabel">field/score/geo/rank</text>
+</svg>
